@@ -12,8 +12,10 @@ body{
     background-position: 0;
 }
 
-.container{
+.container-fluid{
     width: auto;
+    padding-top: 4rem;
+    padding-left: 8rem;
 }
 
 form {
@@ -27,5 +29,9 @@ form {
     border-radius: 3%;
     padding: 2% 4%;
     box-shadow: -20px -15px 0px 3px rgba(255, 255, 255, 0.5)
+}
+
+span {
+    color: yellow;
 }
 
