@@ -35,3 +35,13 @@ span {
     color: yellow;
 }
 
+@media (min-width: 375px) and (max-width: 500px) {
+    body{
+        background-position: -175px;
+    }
+    .container-fluid{
+        padding-left: 0.7rem;
+    }
+    
+}
+
