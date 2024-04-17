@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container-fluid{
+    margin-top: 2%;
+    height: 75vh;
+}
