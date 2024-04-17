@@ -11,5 +11,15 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
+}
+
+fieldset {
+    width: 50%;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 35%;
 }
