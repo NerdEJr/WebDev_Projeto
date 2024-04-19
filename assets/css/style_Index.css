@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+/* CSS Navbar */
+.bg-body-tertiary {
+    background-color:rgba(17,17,17,0.75)!important;
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.35);;
+}
+
+.navbar{
+    --bs-navbar-active-color: #cccccc;
+}
+
+.navbar-nav{
+    --bs-nav-link-color: #ccc;
+    --bs-nav-link-hover-color: var(--bs-nav-link-color);
+}
+
+.nav-item:hover, .nav-item--focus {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    
+}
+/* ------ */
+
 .titulo{
     text-align: center;
 }

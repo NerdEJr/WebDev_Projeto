@@ -1,9 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    
-}
-
 /* CSS Navbar */
 .bg-body-tertiary {
     background-color:rgba(17,17,17,0.75)!important;
@@ -23,12 +17,3 @@
     text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
     
 }
-/* ----- */
-
-.container-fluid iframe{
-    margin-top: 1%;
-    height: 80vh;
-}
-
-
-
