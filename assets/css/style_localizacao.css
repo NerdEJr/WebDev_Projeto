@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,45 +6,54 @@
 
 /* CSS Navbar */
 .bg-body-tertiary {
-    background-color:rgba(17,17,17,0.75)!important;
-    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.35);;
+    background-color: rgba(17, 17, 17, 0.75) !important;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+    ;
 }
 
-.navbar{
+.navbar {
     --bs-navbar-active-color: #cccccc;
 }
 
-.navbar-nav{
+.navbar-nav {
     --bs-nav-link-color: #ccc;
     --bs-nav-link-hover-color: var(--bs-nav-link-color);
 }
 
-.nav-item:hover, .nav-item--focus {
+.nav-item:hover,
+.nav-item--focus {
     text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
-    
+
 }
+
 /* ----- */
 
-.container-fluid iframe{
+.maps {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-fluid iframe {
     margin-top: 1%;
     height: 80vh;
     display: flex;
 }
 
 
-.informacoes-comunicacao{
+.informacoes-comunicacao {
     margin-top: 1%;
     height: 88vh;
     margin-left: 1%;
+    margin-right: 1%;
     float: left;
-    width: 50%;
+    width: 80%;
     height: 200px;
-    background-color: #e62020;
-    justify-content: space-between;
-
-
 }
 
-.maps .container-fluid{
+p {
+    font-size: 18px;
+}
+
+.maps .container-fluid {
     display: flex;
 }
