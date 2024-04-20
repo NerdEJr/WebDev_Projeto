@@ -44,3 +44,21 @@ fieldset {
     position: relative;
     width: 35%;
 }
+
+@media (min-width: 320px) {
+    body{
+        text-align: justify;
+        width: 118%;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    fieldset{
+        width: 100%;
+        text-align: justify;
+    }
+}
