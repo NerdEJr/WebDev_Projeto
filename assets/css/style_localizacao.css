@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 
 /* CSS Navbar */
@@ -28,7 +28,23 @@
 .container-fluid iframe{
     margin-top: 1%;
     height: 80vh;
+    display: flex;
 }
 
 
+.informacoes-comunicacao{
+    margin-top: 1%;
+    height: 88vh;
+    margin-left: 1%;
+    float: left;
+    width: 50%;
+    height: 200px;
+    background-color: #e62020;
+    justify-content: space-between;
 
+
+}
+
+.maps .container-fluid{
+    display: flex;
+}
