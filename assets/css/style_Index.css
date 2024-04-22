@@ -70,11 +70,6 @@ div#navbarNav {
     gap: 1rem;
 }
 
-.container-personagens{
-    align-items: center;
-    
-}
-
 /*area de jogabilidade*/
 fieldset {
     width: 50%;
@@ -87,7 +82,7 @@ fieldset {
 }
 
 .container-personagens{
-    padding:  350px;
+    position: relative;
     gap: 1rem;
 }
 
@@ -113,7 +108,7 @@ fieldset {
 /*CARROSSEL (bruna)*/
 /*SESSÃO DOS PERSONAGENS*/
 .container-personagens {
-    max-width: 1080px 72px;
+    max-width: 1200px;
     width: 95%;
 }
 
