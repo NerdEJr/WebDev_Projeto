@@ -9,7 +9,17 @@
   <link rel="shortcut icon" href="./assets/imgs/icon-genshin-impact.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style_Index.css">
   <title>Página Inicial</title>
+
+  <!-- Link de fontes do Google para ícones dos botoes do carrossel-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
+
 
 <body>
   <!-- Navbar-->
@@ -19,13 +29,13 @@
       <a class="navbar-brand" href="#">
         <img src="assets/imgs/Genshin_Logo.png" alt="Logo">
       </a>
-      
+
       <!-- Botão Toggle para telas pequenas -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <!-- Links e Menus -->
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
@@ -45,9 +55,9 @@
       </div>
     </div>
   </nav>
-  
-  
-  
+
+
+
 
   <!--o que é genshin impact?-->
   <section name="oque" class="container-fluid">
@@ -96,7 +106,7 @@
     </div>
   </section>
 
-<!--CARROSSEL-->
+  <!--CARROSSEL-->
   <section name="personagens" class="container-fluid">
     <h2 class="titulo">Personagens</h2>
     <div class="container">
@@ -157,11 +167,220 @@
 
   </section>
 
+
+
+
+  <!--SESSÃO DOS PERSONAGENS-->
+  <section class="container-personagens">
+    <!--QUADRO DO TiTULO -->
+    <div class="quadro-titulo">
+      <h2 class="titulo">personagens</h2>
+    </div>
+    <!--QUADRO DAS IMAGENS-->
+    <div class="slider-wrapper">
+
+      <!--BOTÃO-->
+      <button id="prev-slide" class="slide-button material-symbols-rounded">
+        chevron_left
+      </button>
+
+      <!--IMAGENS DOS PERSONAGENS-->
+      <ul class="image-list">
+        <!--VIAJANTE-->
+        <li class="item-a">
+          <div class="teste">
+            <div class="list">
+              <!--viajante-->
+              <div class="image-item">
+                <img
+                  src="https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Traveler_Male_Card.png/revision/latest?cb=20220725205310"
+                  alt="img-1" />
+
+                <h3>VIAJANTE</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">O Viajante é o protagonista jogável de Genshin Impact.
+                    No início do jogo existem 2 gêmeos, uma garota e um garoto, que viajam pelo
+                    universo até que são atacados por uma Deusa Desconhecido que captura um dos
+                    gêmeos, deixa o outro gêmeo desacordado por um tempo não determinado e sela seus
+                    caminhos de viagem deixando-os presos em Teyvat. Após um tempo o gêmeo
+                    desacordado acorda e parte em uma jornada em busca do irmão/irmã perdido,
+                    acompanhado pela Paimon.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--DILUC-->
+        <li class="item-b">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item"
+                  src="https://static.wikia.nocookie.net/genshin-impact/images/b/b1/Personagem_Diluc_Cart%C3%A3o.jpg/revision/latest?cb=20210319195352&path-prefix=pt-br"
+                  alt="img-2" />
+                <h3>DILUC</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">Nascido na influente Família Ragnvindr, Diluc é o atual proprietário do
+                    Adega do Alvorecer e um nobre de alta estima na sociedade de Mondstadt. Embora um incidente anterior
+                    o tenha levado a se separar dos Cavaleiros de Favonius, ele continua a proteger Mondstadt à sua
+                    própria maneira.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!--wriothesley-->
+        <li class="item-c">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item"
+                  src="https://static.wikia.nocookie.net/genshin-impact/images/4/4a/Personagem_Wriothesley_Cart%C3%A3o.jpg/revision/latest?cb=20230814171011&path-prefix=pt-br"
+                  alt="img-3" />
+                <h3>WRIOTHESLEY</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">Wriothesley, o reservado Duque da Fortaleza Meropide, gerencia
+                    discretamente um local onde os criminosos são exilados no fundo do mar. Apesar da aparente
+                    tranquilidade, a fortaleza é um ninho de conflitos de interesses, onde até os infiltrados são
+                    absorvidos pelo ambiente. Ao ser elogiado por sua habilidade em resolver problemas, Wriothesley
+                    simplesmente põe sua xícara de chá na mesa e pega seu jornal, revelando sua perspectiva única: "Eles
+                    só queriam encontrar um lugar para ter uma vida regrada. Eu simplesmente dei a eles a
+                    'tranquilidade' que precisavam".
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--venti-->
+        <li class="item-d">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item"
+                  src="https://static.wikia.nocookie.net/genshin-impact/images/4/44/Personagem_Venti_Cart%C3%A3o.jpg/revision/latest?cb=20230801152706&path-prefix=pt-br"
+                  alt="img-4" />
+                <h3>VENTI</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">Venti é um bardo amante do vinho e de espírito livre em Mondstadt e o
+                    atual corpo mortal de Barbatos, o Arconte Anemo. Ele também é um personagem Anemo jogável em Genshin
+                    Impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--zhongli-->
+        <li class="item-e">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item" src="https://i.pinimg.com/736x/a0/5d/51/a05d51fef18b037275995278da46bcd5.jpg"
+                  alt="img-5" />
+                <h3>ZHONGLI</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">Zhongli é um consultor da Casa Funerária de Wangsheng que aparece pela
+                    primeira vez nas Missões do Arconte Capítulo 1, Ato 2: Corpos que Partiram para Longe.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--shogun-raiden-->
+        <li class="item-f">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item"
+                  src="https://pm1.aminoapps.com/8703/d8e09eba068737dd904957f812dc1fce6af6866dr1-720-1280v2_uhq.jpg"
+                  alt="img-6" />
+                <h3>SHOGUN RAIDEN</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">A Shogun Raiden é a composição de dois seres coexistindo em um só corpo:
+                    Ei, a atual Arconte Electro de Inazuma; e a Shogun, a marionete criada por Ei para atuar como
+                    governante de Inazuma em seu lugar.
+                    em uma jornada em busca do irmão/irmã perdido,
+                    acompanhado pela Paimon.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--nahida-->
+        <li class="item-g">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item"
+                  src="https://static.wikia.nocookie.net/genshin-impact/images/0/0b/Personagem_Nahida_Cart%C3%A3o.jpg/revision/latest?cb=20220926182427&path-prefix=pt-br"
+                  alt="img-7" />
+                <h3>NAHIDA</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">Ela é o corpo mortal da Lorde Menor Kusanali, atual Arconte Dendro.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--furina-->
+        <li class="item-h">
+          <div class="teste">
+            <div class="list">
+              <div class="image-item">
+                <img class="image-item"
+                  src="https://static.wikia.nocookie.net/gensin-impact/images/2/27/Furina_Card.png/revision/latest?cb=20230925100151"
+                  alt="img-8" />
+                <h3>FURINA</h3>
+                <div class="informacoes-personagem">
+                  <p href="#" class="tentativa">Furina é a "humanidade" da Deusa da Justiça, Focalors, separada de sua
+                    divindade.
+                    Amaldiçoada com a imortalidade, ela supervisionou Fontaine como a Arconte Hydro atuante por 500
+                    anos, a fim de realizar os planos do verdadeiro Arconte de enganar os Princípios Celestiais para
+                    salvar Fontaine de uma grande profecia. Após a morte dos Focalors e a destruição do Trono Divino do
+                    Arconte Hydro, ela abdicou de seu papel e agora vive sua vida como um ser humano comum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+
+        <!--<img class="image-item" src="images/img-9.jpg" alt="img-9" />
+              <img class="image-item" src="images/img-10.jpg" alt="img-10" />-->
+      </ul>
+      <button id="next-slide" class="slide-button material-symbols-rounded">
+        chevron_right
+      </button>
+    </div>
+
+    <!--FUNCIONALIDADE DO DESLIZAMENTO-->
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </section>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  
-  
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
