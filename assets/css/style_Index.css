@@ -63,12 +63,14 @@ div#navbarNav {
     text-align: center;
 }
 
+
 .container {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+/*area de jogabilidade*/
 fieldset {
     width: 50%;
     text-align: center;
@@ -96,3 +98,4 @@ fieldset {
         text-align: justify;
     }
 }
+
