@@ -17,7 +17,24 @@ body{
     background: linear-gradient(var(--cor-fundo-principal)0%, var(--cor-fundo-secundaria)100%);
 }
 
-/* CSS Navbar */
+div#navbarNav {
+    padding-right: 23rem;
+    
+}
+.navbar {
+    padding-top: 20px; /* Ajuste o valor conforme necessário */
+    padding-bottom: 20px; /* Ajuste o valor conforme necessário */
+    background: rgb(230,226,244);
+    background: linear-gradient(90deg, rgba(230,226,244,1) 0%, rgba(203,227,238,1) 80%);
+    
+  }
+  
+  .navbar-brand img {
+    height: 66px; /* Defina a altura da imagem */
+    width: auto; /* Mantenha a largura automática para manter a proporção */
+  }
+  
+/* CSS Navbar 
 .bg-body-tertiary {
     background:linear-gradient(to right,var(--cor-navbar-principal)0%, var(--cor-navbar-secundaria)80%)!important;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.35);
