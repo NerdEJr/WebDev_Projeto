@@ -11,6 +11,7 @@
     --cor-navbar-principal:#E6E2F4;
     --cor-navbar-secundaria:#CBE3EE;
     --cor-fonte: #7d7690;
+    --font: font-family: 'poppins', serif;
 }
 
 body{
@@ -269,7 +270,7 @@ h3 {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: rgba(5, 5, 5, 0.6);
+    background-color: rgba(5, 5, 5, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
