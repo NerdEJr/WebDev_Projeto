@@ -30,11 +30,16 @@ nav.navbar.navbar-expand-lg.navbar-light {
 
 img.nav-logo {
     height: 100%;
-    width: 32%;
+    width: 50%;
+}
+
+.navbar-brand {
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    width: 65%;
 }
 
 ul.navbar-nav {
-    gap: 6.78rem;
+    gap: 1rem;
 }
 
 .container {
