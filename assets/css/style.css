@@ -30,7 +30,11 @@ nav.navbar.navbar-expand-lg.navbar-light {
 
 img.nav-logo {
     height: 100%;
-    width: 35%;
+    width: 32%;
+}
+
+ul.navbar-nav {
+    gap: 6.78rem;
 }
 
 .container {

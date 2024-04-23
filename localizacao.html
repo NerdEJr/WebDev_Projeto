@@ -8,35 +8,45 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="shortcut icon" href="./assets/imgs/icon-genshin-impact.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style_localizacao.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
   <title>Localização</title>
 </head>
 
 <body>
   <!-- Navbar-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <img class="navbar-brand" src="assets/imgs/Genshin_Logo.png" alt="">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <!-- Logo ou Imagem Brand -->
+    <a class="navbar-brand" href="#">
+        <img class="nav-logo" src="assets/imgs/Logo_Genshin-Black.png" alt="Logo">
+    </a>
+
+    <!-- Botão Toggle para telas pequenas -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Links e Menus -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
+        <!-- Link Home -->
+        <li class="nav-item">
+            <a class="nav-link" href="pagPrincipal.html">Home</a>
+        </li>
+        <!-- Link Sobre Nós -->
+        <li class="nav-item">
             <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="localização.html">Localização</a>
-          </li>
+        </li>
+        <!-- Link Localização -->
+        <li class="nav-item">
+            <a class="nav-link" href="localizacao.html">Localização</a>
+        </li>
         </ul>
-      </div>
     </div>
-  </nav>
+    </div>
+</nav>
   <div class="maps">
 
     <div class="container-fluid">
@@ -46,14 +56,14 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="informacoes-comunicacao">
-      <h3>Contate-nos</h3>
+      <h2>Contate-nos</h2>
 
       <p>Se no futuro os Viajantes encontrarem problemas relacionados à segurança de suas Contas HoYoverse, "Genshin
         Impact", entre outros produtos, temos diversas opções para que entrem em contato conosco (incluindo o APP da
         HoYoLAB, e-mail do SAC de Genshin Impact genshin_cs@hoyoverse.com, entre outros).</p>
 
       <p>Caso você tenha mais dúvidas ou questões, mande um e-mail para nós em genshin_cs@mihoyo.com</p>
-      <h5>Outros contatos:</h5>
+      <h4>Outros contatos:</h4>
       <p>
         HoYoLAB hoyolab@hoyoverse.com <br>
         Genshin Impact genshin_cs@hoyoverse.com <br>

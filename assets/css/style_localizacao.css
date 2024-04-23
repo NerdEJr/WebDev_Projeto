@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html body{
+    height: 100vh;
+}
+
 /* CSS Navbar */
 .bg-body-tertiary {
     background-color: rgba(17, 17, 17, 0.75) !important;
@@ -11,14 +15,6 @@
     ;
 }
 
-.navbar {
-    --bs-navbar-active-color: #cccccc;
-}
-
-.navbar-nav {
-    --bs-nav-link-color: #ccc;
-    --bs-nav-link-hover-color: var(--bs-nav-link-color);
-}
 
 .nav-item:hover,
 .nav-item--focus {
@@ -52,6 +48,10 @@
 
 p {
     font-size: 18px;
+}
+
+h4 {
+    padding-left: 1rem;
 }
 
 .maps .container-fluid {
