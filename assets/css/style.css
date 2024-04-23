@@ -70,6 +70,10 @@ fieldset {
 }
 
 /*CARROSSEL (bruna)*/
+.container-fluid{
+    --bs-gutter-x: 8rem;
+    --bs-gutter-y: 0;
+}
 /*SESSÃO DOS PERSONAGENS*/
 .container-personagens {
     max-width: 1080px 72px;
