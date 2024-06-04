@@ -5,11 +5,7 @@ const password = document.getElementById("password")
 const passwordConfirmation = document.getElementById("password-confirmation");
 
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    checkForm(); //VERIFICANDO FORMULÁRIO
-})
 
 
 
