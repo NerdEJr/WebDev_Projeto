@@ -1,7 +1,6 @@
 <?php
 
 function conectar(){
-
     $hostname = "localhost";
     $port = 3306;
     $DBname = "genshin"; 
@@ -34,4 +33,18 @@ function cadastrarUsuarios($nomeUsuario, $email, $senha){
         }
     }
 }
+
+function checarNoBD(String $campoDaTabela, $valorDoCampo) {
+    $conection = conectar(); 
+    $busca = $conection->prepare("SELECT * FROM usuarios WHERE $campoDaTabela = :valorASerBuscado");
+    $busca->bindParam(":valorASerBuscado",$valorDoCampo);
+    $busca->execute();
+
+    if ($busca > 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
  ?>
