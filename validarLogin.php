@@ -5,12 +5,12 @@ include "operarBD.php";
 $login = $_POST["login"];
 $senha = $_POST["senha"];
 
-echo($login);
-echo($senha);
+/* echo($login);
+echo($senha); */
 
 $conection = conectar();
 if (checarNoBD("email", $login)){
-    echo("email encontrado");
+    // echo("email encontrado"); Debug pq nn sei debugar em PHP
     $buscarSenha = $conection->prepare("SELECT userPassword FROM usuarios WHERE email = :email");
     $buscarSenha->bindParam(":email", $login);
     $buscarSenha->execute();
@@ -18,7 +18,8 @@ if (checarNoBD("email", $login)){
     $usuario = $buscarSenha->fetch();
     $senhaUsuario = $usuario['userPassword'];
 
-    if(password_verify($senha, $senhaUsuario)){
+    if(($senha == $senhaUsuario)){
+        echo("Usuario logado com sucesso! :)");
         return true;
     } else {
         echo("Senha incorreta");

@@ -44,7 +44,7 @@ function checarNoBD(String $campoDaTabela, $valorDoCampo) {
         $busca->execute();
 
         $usuario = $busca->fetch();
-        print_r($usuario);
+        return print_r($usuario);
         
         /* if ($usuario["$campoDaTabela"] == $valorDoCampo){
             return $usuario;
