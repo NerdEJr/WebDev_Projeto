@@ -36,14 +36,32 @@ function cadastrarUsuarios($nomeUsuario, $email, $senha){
 
 function checarNoBD(String $campoDaTabela, $valorDoCampo) {
     $conection = conectar(); 
-    $busca = $conection->prepare("SELECT * FROM usuarios WHERE $campoDaTabela = :valorASerBuscado");
-    $busca->bindParam(":valorASerBuscado",$valorDoCampo);
-    $busca->execute();
+    try{
 
-    if ($busca > 0){
-        return true;
-    } else {
-        return false;
+        $busca = $conection->prepare("SELECT :campo FROM usuarios WHERE :campo = :valorASerBuscado");
+        $busca->bindParam(":campo",$campoDaTabela);
+        $busca->bindParam(":valorASerBuscado",$valorDoCampo);
+        $busca->execute();
+
+        $usuario = $busca->fetch();
+        print_r($usuario);
+        
+        /* if ($usuario["$campoDaTabela"] == $valorDoCampo){
+            return $usuario;
+        } else {
+            return;
+        } */
+    } catch (PDOException $e){
+        echo("<br>" . $e->getMessage() );
+    }
+}
+
+function validarUsuario($usuario, $senha){
+    $conexao = conectar();
+    try{
+
+    } catch (PDOException $e){
+        echo($e->getMessage());
     }
 }
 
