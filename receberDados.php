@@ -1,5 +1,6 @@
 <?php
 include_once "operarBD.php";
+include_once "index.html";
 try{
     $conexao = conectar();
     $userName = "";
@@ -29,6 +30,7 @@ try{
     if (filter_var($userEmail, FILTER_VALIDATE_EMAIL) && !empty($userName) && !empty($userPassword)) {
         // Tentar cadastrar o usuário
         if (cadastrarUsuarios($userName, $userEmail, $userPassword)) {
+            header("Location: ./index.html");
             echo "Usuário cadastrado com sucesso!";
         } else {
             echo "Erro ao cadastrar usuário.";

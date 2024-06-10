@@ -30,12 +30,13 @@ nav.navbar.navbar-expand-lg.navbar-light {
 
 img.nav-logo {
     height: 100%;
-    width: 50%;
+    width: 100%;
 }
 
 .navbar-brand {
     padding-bottom: var(--bs-navbar-brand-padding-y);
-    width: 65%;
+    width: 30%;
+    text-align: center;
 }
 
 ul.navbar-nav {
