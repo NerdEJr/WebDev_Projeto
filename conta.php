@@ -1,6 +1,13 @@
 <?php
+    include "operarBD.php";    
+    if (!session_start()) {
+        header('location: ./login.html');
+    }else{
+        $email = $_SESSION["user_email"];
+    }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,50 +17,63 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Conta</title>
 </head>
-<body>
+    <section>
      <!-- Navbar-->
-     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid nav-brand">
-            <!-- Logo ou Imagem Brand -->
-            <a class="navbar-brand" href="#">
-                <img class="nav-logo" src="assets/imgs/Logo_Genshin-Black.png" alt="Logo">
-            </a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid nav-brand">
+                <!-- Logo ou Imagem Brand -->
+                <a class="navbar-brand" href="#">
+                    <img class="nav-logo" src="assets/imgs/Logo_Genshin-Black.png" alt="Logo">
+                </a>
 
-        </div>
-        <div class="container-fluid">
-            <!-- Botão Toggle para telas pequenas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            </div>
+            <div class="container-fluid">
+                <!-- Botão Toggle para telas pequenas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Links e Menus -->
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav">
-                    <!-- Link Home -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="pagPrincipal.html">Home</a>
-                    </li>
-                    <!-- Link Sobre Nós -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
-                    </li>
-                    <!-- Link Localização -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="localizacao.html">Localização</a>
-                    </li>
-                    <!-- Link Login -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <!-- Link Cadastro -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="cadastro.html">Cadastre-se</a>
-                    </li>
-                </ul>
+                <!-- Links e Menus -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Link Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="pagPrincipal.html">Home</a>
+                        </li>
+                        <!-- Link Sobre Nós -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
+                        </li>
+                        <!-- Link Localização -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="localizacao.html">Localização</a>
+                        </li>
+                        <!-- Link Login -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <!-- Link Cadastro -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <form action="./excluirUsuario.php" method="post" class="form">
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h6>Deletar sua conta</h6>
+                <input style="display: none;" name="email" value="<?php echo $email; ?>" type="text">
+                <input type="submit" class="btn btn-primary" name="DeletarUser" value="Deletar conta">
             </div>
         </div>
-    </nav>
+        
+    </form>
 
     
 </body>
