@@ -19,6 +19,18 @@
 
 </head>
 
+<?php
+    if((isset($_SESSION["Conectado"]) == TRUE)){  
+        if(!session_start()){
+            header('location: index.php?sair');  
+        } else {     
+            $email = $_SESSION["user_email"];
+            $nickName = $_SESSION["NickName"];
+            $idUser = $_SESSION["user_id"];
+        }
+    }
+?>
+
 <body>
     <?php
         if(isset($_GET['sair'])) {

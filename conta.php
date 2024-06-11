@@ -27,7 +27,7 @@
         }
         include("navbar.php");
     ?>
-    <form action="./udConta.php" method="post" class="form">
+    <form action="./udConta.php" method="post" class="form-group d-flex flex-column">
         <section style="margin-top: 1rem;" class="container-fluid">
             <div class="row">
                 <div class="col-md-12">

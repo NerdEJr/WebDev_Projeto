@@ -1,3 +1,13 @@
+<?php
+    if(!session_start()){
+        header('location: index.php?sair');
+
+    } else {       
+        $email = $_SESSION["user_email"];
+        $nickName = $_SESSION["NickName"];
+        $idUser = $_SESSION["user_id"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,12 +23,14 @@
   <title>Localização</title>
 </head>
 
+
+
 <body>
   <?php
         if(isset($_GET['sair'])) {
-            session_start();
-            session_destroy();            
-            header("Location: index.php");
+          session_start();
+          session_destroy();            
+          header("Location: index.php");
         }
         include("navbar.php");
     ?>

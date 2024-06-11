@@ -1,3 +1,13 @@
+<?php
+    if(!session_start()){
+        header('location: index.php?sair');
+
+    } else {       
+        $email = $_SESSION["user_email"];
+        $nickName = $_SESSION["NickName"];
+        $idUser = $_SESSION["user_id"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,6 +22,12 @@
 
   <title>Sobre Nós</title>
 </head>
+
+<?php
+    if((isset($_SESSION["Conectado"]) == TRUE)){  
+        header('location: index.php?sair');
+    }
+?>
 
 <body style="height: 100vh;">
 <?php

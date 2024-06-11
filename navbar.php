@@ -47,7 +47,7 @@
                     <ul class="navbar-nav">
                         <!-- Link Home -->
                         <li class="nav-item">
-                            <a class="nav-link" href="pagPrincipal.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <!-- Link Sobre Nós -->
                         <li class="nav-item">
@@ -56,6 +56,9 @@
                         <!-- Link Localização -->
                         <li class="nav-item">
                             <a class="nav-link" href="localizacao.php">Localização</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="conta.php">Conta</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?sair">Sair</a>
