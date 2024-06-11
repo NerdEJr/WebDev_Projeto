@@ -1,6 +1,3 @@
-<?php
-    session_destroy();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,6 +21,11 @@
 
 <body>
     <?php
+        if(isset($_GET['sair'])) {
+            session_start();
+            session_destroy();
+            header("Location: index.php");
+        }
         include("navbar.php");
     ?>
 
