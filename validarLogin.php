@@ -1,5 +1,6 @@
 <?php
 include "operarBD.php";
+include "index.html";
 
 //Aqui verifico se o form do login está passando os parametros e se sim salvo nas variaveis
 if (isset($_POST['login']) && isset($_POST['senha'])) {
@@ -9,7 +10,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
     $conection = conectar();
 
 
-    $sql = "SELECT nickname FROM usuarios WHERE email = :email AND userPassword = :senha";
+    $sql = "SELECT nickname, email FROM usuarios WHERE email = :email AND userPassword = :senha";
     $usuario = $conection->prepare($sql);
 
     if($usuario){

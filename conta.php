@@ -1,11 +1,8 @@
 <?php
-    include "operarBD.php";    
-    if (!session_start()) {
-        header('location: ./login.html');
-    }else{
-        $email = $_SESSION["user_email"];
-    }
+    if(!session_start()){
+        header('location: login.php');
 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +60,9 @@
         </nav>
     </section>
 
+
+
+
     <form action="./excluirUsuario.php" method="post" class="form">
         <section style="justify-content: center;" class="container">
             <div class="row">
@@ -71,6 +71,7 @@
                     <input style="display: none;" name="email" value="<?php echo $email; ?>" type="text">
                     <input type="submit" class="btn btn-info" name="DeletarUser" value="Deletar conta">
                 </div>
+
             </div>
         </section>
     </form>
