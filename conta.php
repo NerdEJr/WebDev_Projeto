@@ -20,16 +20,16 @@
     ?>
 
     <form action="./excluirUsuario.php" method="post" class="form">
-        
-        <div class="row">
-            <div class="col-md-12">
-                <h6>Deletar sua conta</h6>
-                <input style="display: none;" name="email" value="<?php echo $email; ?>" type="text">
-                <input type="submit" class="btn btn-primary" name="DeletarUser" value="Deletar conta">
+        <section style="justify-content: center;" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6>Deletar sua conta</h6>
+                    <input style="display: none;" name="email" value="<?php echo $email; ?>" type="text">
+                    <input type="submit" class="btn btn-info" name="DeletarUser" value="Deletar conta">
+                </div>
 
             </div>
-        </div>
-        
+        </section>
     </form>
     
 </body>

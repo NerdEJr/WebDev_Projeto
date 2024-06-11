@@ -31,7 +31,8 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
 
             $_SESSION["Conectado"] = $conectado;
             $_SESSION["NickName"] = $result["nickname"];
-            $_SESSION["Email"] = $result["email"];
+            $_SESSION["user_email"] = $email;
+
             header("Location: conta.php");
         } else {
             echo "Nenhum usuário encontrado com as credenciais fornecidas.";
