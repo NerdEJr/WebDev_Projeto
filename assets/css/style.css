@@ -16,6 +16,12 @@
     --font: font-family: 'poppins', serif;
 }
 
+.btn-info {
+    color: var(--cor-fonte);
+    background-color: white;
+    border-color: var(--cor-fonte);
+}
+
 body{
     height: auto;
     background: var(--cor-fundo-principal);
