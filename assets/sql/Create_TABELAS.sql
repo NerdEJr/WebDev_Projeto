@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS personagens (
 
 -- Criar a tabela "usuarios"
 CREATE TABLE IF NOT EXISTS usuarios (
-	nickname VARCHAR(40) PRIMARY KEY,
-    email VARCHAR(80) NOT NULL,
+	nickname VARCHAR(40) NOT NULL,
+    email VARCHAR(80) PRIMARY KEY NOT NULL,
     userPassword VARCHAR(30) NOT NULL   
 );

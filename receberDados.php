@@ -19,19 +19,18 @@ try{
     $userEmail = filter_var($userEmail, FILTER_SANITIZE_EMAIL);
     $userPassword = htmlspecialchars($userPassword, ENT_QUOTES, 'UTF-8');
 
-
- 
     // echo "<h1 style='text-align:center;color:blue;'>Estamos no PHP </h1>";
     // echo "<br><br>";
     // echo "Nome de Usuario: $userName";
     // echo "<br><br>";
     // echo "Email:$userEmail <br><br>";
     // echo "Senha: $userPassword";
+
     if (filter_var($userEmail, FILTER_VALIDATE_EMAIL) && !empty($userName) && !empty($userPassword)) {
         // Tentar cadastrar o usuário
         if (cadastrarUsuarios($userName, $userEmail, $userPassword)) {
             header("Location: ./index.html");
-            echo "Usuário cadastrado com sucesso!";
+            //echo "Usuário cadastrado com sucesso!";
         } else {
             echo "Erro ao cadastrar usuário.";
         }
