@@ -1,5 +1,6 @@
 <?php
 include "operarBD.php";
+include "index.html";
 
 //Aqui verifico se o form do login está passando os parametros e se sim salvo nas variaveis
 if (isset($_POST['login']) && isset($_POST['senha'])) {
