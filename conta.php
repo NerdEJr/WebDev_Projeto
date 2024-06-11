@@ -1,6 +1,6 @@
 <?php
     if(!session_start()){
-        header('location: login.php');
+        header('location: index.php?sair');
 
     } else {
         print_r($_SESSION);

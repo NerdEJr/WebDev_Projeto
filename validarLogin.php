@@ -23,7 +23,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
         //verificamos se teve algum linha de resultado
         if ($usuario->rowCount() > 0) {
             //pega o valor do resultado da busca
-            $result = $usuario->fetchAll(PDO::FETCH_ASSOC);
+            $result = $usuario->fetch(PDO::FETCH_ASSOC);
 
             $conectado = TRUE;
 
