@@ -16,7 +16,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <?php if((!isset($_SESSION["Conectado"]))){?>   
+            <?php if((isset($_SESSION["Conectado"]) !== TRUE)){?>   
             <!-- Links e Menus -->
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
@@ -56,6 +56,9 @@
                         <!-- Link Localização -->
                         <li class="nav-item">
                             <a class="nav-link" href="localizacao.html">Localização</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?sair">Sair</a>
                         </li>
                     </ul>
                 </div>
