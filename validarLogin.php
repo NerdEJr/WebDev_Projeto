@@ -1,5 +1,6 @@
 <?php
 include "operarBD.php";
+include "index.html";
 
 
 $login = $_POST["login"];
@@ -19,6 +20,7 @@ if (checarNoBD("email", $login)){
     $senhaUsuario = $usuario['userPassword'];
 
     if(($senha == $senhaUsuario)){
+        header("Location: ./index.html");
         echo("Usuario logado com sucesso! :)");
         return true;
     } else {
