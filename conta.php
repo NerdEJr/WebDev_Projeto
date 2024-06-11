@@ -3,6 +3,8 @@
         header('location: login.php');
 
     } else {
+        print_r($_SESSION);
+
         $email = $_SESSION["user_email"];
         $nickName = $_SESSION["NickName"];
         $idUser = $_SESSION["id"];
@@ -78,6 +80,12 @@
                     <div class="form-group">
                         <label for="userNickName">Nome de Usuário</label><br>
                         <input class="form-control" id="userNickName" value="<?php echo $nickName;?>" name="userNickName" type="text">
+                    </div>                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userEmail">Email</label><br>
+                        <input class="form-control" id="userEmail" value="<?php echo $email;?>" name="userEmail" type="text">
                     </div>                    
                 </div>                
                 <div class="col-md-3">
