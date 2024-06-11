@@ -2,12 +2,10 @@
     if(!session_start()){
         header('location: index.php?sair');
 
-    } else {
-        print_r($_SESSION);
-
+    } else {       
         $email = $_SESSION["user_email"];
         $nickName = $_SESSION["NickName"];
-        $idUser = $_SESSION["id"];
+        $idUser = $_SESSION["user_id"];
     }
 ?>
 

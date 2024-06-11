@@ -23,7 +23,7 @@
     <?php
         if(isset($_GET['sair'])) {
             session_start();
-            session_destroy();
+            session_destroy();            
             header("Location: index.php");
         }
         include("navbar.php");
