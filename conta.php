@@ -2,6 +2,9 @@
     if(!session_start()){
         header('location: login.php');
 
+    } else {
+        $email = $_SESSION["user_email"];
+        $nickName = $_SESSION["NickName"];
     }
 ?>
 
@@ -59,6 +62,36 @@
             </div>
         </nav>
     </section>
+    <form>
+        <section style="margin-top: 1rem;" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Editar dados</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userNickName">Nome de Usuário</label><br>
+                        <input class="form-control" id="userNickName" value="<?php echo $nickName;?>" name="userNickName" type="text">
+                    </div>                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userEmail">Email</label><br>
+                        <input class="form-control" id="userEmail" value="<?php echo $email;?>" name="userEmail" type="text">
+                    </div>                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userPasswd">Senha</label><br>
+                        <input class="form-control" id="userPasswd" name="userPasswd" type="password">
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+    </form>
 
 
 
