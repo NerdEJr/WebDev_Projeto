@@ -1,6 +1,6 @@
 <?php
 include "operarBD.php";
-include "index.html";
+include "index.php";
 
 //Aqui verifico se o form do login está passando os parametros e se sim salvo nas variaveis
 if (isset($_POST['login']) && isset($_POST['senha'])) {
@@ -10,7 +10,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
     $conection = conectar();
 
 
-    $sql = "SELECT nickname, email FROM usuarios WHERE email = :email AND userPassword = :senha";
+    $sql = "SELECT id, email, senha, nickname FROM usuarios WHERE email = :email AND userPassword = :senha";
     $usuario = $conection->prepare($sql);
 
     if($usuario){
@@ -23,17 +23,20 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
         //verificamos se teve algum linha de resultado
         if ($usuario->rowCount() > 0) {
             //pega o valor do resultado da busca
-            $result = $usuario->fetch(PDO::FETCH_ASSOC);
+            $result = $usuario->fetchAll(PDO::FETCH_ASSOC);
 
             $conectado = TRUE;
 
             session_start();
 
-            $_SESSION["Conectado"] = $conectado;
-            $_SESSION["NickName"] = $result["nickname"];
-            $_SESSION["user_email"] = $email;
+            print_r($result);
 
-            header("Location: conta.php");
+            $_SESSION["user_id"] = $result["id"];
+            $_SESSION["NickName"] = $result["nickname"];
+            $_SESSION["user_email"] = $result["email"];
+            $_SESSION["Conectado"] = $conectado;
+
+            //header("Location: conta.php");
         } else {
             echo "Nenhum usuário encontrado com as credenciais fornecidas.";
         }

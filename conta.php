@@ -2,6 +2,12 @@
     if(!session_start()){
         header('location: login.php');
 
+    } else {
+        print_r($_SESSION);
+
+        $email = $_SESSION["user_email"];
+        $nickName = $_SESSION["NickName"];
+        $idUser = $_SESSION["id"];
     }
 ?>
 
@@ -14,57 +20,96 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Conta</title>
 </head>
-<body>
-    <?php
-        include("navbar.php");
-    ?>
+    <section>
+     <!-- Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid nav-brand">
+                <!-- Logo ou Imagem Brand -->
+                <a class="navbar-brand" href="#">
+                    <img class="nav-logo" src="assets/imgs/Logo_Genshin-Black.png" alt="Logo">
+                </a>
 
-<div class="container conteudo">
-        
-        <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <h2>Perfil do Usuário</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="user-email"><strong>Email:</strong></label>
-                            <p id="user-email">usuario@example.com</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="user-password"><strong>Senha:</strong></label>
-                            <p id="user-password">********</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="user-dob"><strong>Data de Nascimento:</strong></label>
-                            <p id="user-dob">01/01/2000</p>
-                        </div>
-                        <button id="delete-account-button" class="btn btn-danger btn-block">Apagar Conta</button>
-                    </div>
+            </div>
+            <div class="container-fluid">
+                <!-- Botão Toggle para telas pequenas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links e Menus -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Link Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="pagPrincipal.html">Home</a>
+                        </li>
+                        <!-- Link Sobre Nós -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
+                        </li>
+                        <!-- Link Localização -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="localizacao.html">Localização</a>
+                        </li>
+                        <!-- Link Login -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <!-- Link Cadastro -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <h2>Personagens</h2>
-                        </div>
-                        <div class="card-body text-center">
-                            <p>Veja a lista de personagens disponíveis.</p>
-                            <a href="personagens.html" class="btn btn-primary btn-block">Ver Personagens</a>
-                        </div>
-                    </div>
+        </nav>
+    </section>
+    <form action="./udConta.php" method="post" class="form">
+        <section style="margin-top: 1rem;" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Editar dados</h5>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="row">
+                <div style="display: none" class="col-md-3">                    
+                    <input class="form-control" id="idUser" value="<?php echo $idUser;?>" name="idUser" type="text">                                      
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userNickName">Nome de Usuário</label><br>
+                        <input class="form-control" id="userNickName" value="<?php echo $nickName;?>" name="userNickName" type="text">
+                    </div>                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userEmail">Email</label><br>
+                        <input class="form-control" id="userEmail" value="<?php echo $email;?>" name="userEmail" type="text">
+                    </div>                    
+                </div>                
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userPasswd">Senha</label><br>
+                        <input class="form-control" id="userPasswd" name="userPasswd" type="password">
+                    </div>                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userPasswd">Editar Dados</label><br>
+                        <input class="btn btn-info" id="userPasswd" name="EditUser" type="submit" value="Editar Dados">
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+    </form>
 
 
-    <form action="./excluirUsuario.php" method="post" class="form">
-        <section style="justify-content: center;" class="container">
+
+
+    <form action="./udConta.php" method="post" class="form">
+        <section style="margin-top: 1rem;" class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <h6>Deletar sua conta</h6>
@@ -75,6 +120,7 @@
             </div>
         </section>
     </form>
+
     
 </body>
 </html>
