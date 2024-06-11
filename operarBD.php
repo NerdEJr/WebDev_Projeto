@@ -75,7 +75,7 @@ function DeletarUsuario($email) {
             $sql->bindParam(':email', $email);            
             $sql->execute();
 
-            header("Location: index.html");
+            header("Location: index.php");
         }
 
 
@@ -83,5 +83,24 @@ function DeletarUsuario($email) {
         echo($e->getMessage());
     }
 
+}
+
+function EditarDadosUsuario($idUser, $userEmail, $senha, $userNickName) {
+    try{
+        $conection = conectar();
+        if($conection){
+
+            $sql = $conection->prepare("UPDATE usuarios SET email = :email, userPassword = :senha, nickname = :nickname WHERE id = :idUser");            
+            $sql->bindParam(':email', $userEmail);
+            $sql->bindParam(':senha', $senha); 
+            $sql->bindParam(':nickname', $userNickName); 
+            $sql->bindParam(':idUser', $idUser);             
+            $sql->execute();
+
+            header("Location: index.php");
+        }
+    } catch (PDOException $e){
+        echo($e->getMessage());
+    }
 }
 ?>

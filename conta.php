@@ -5,6 +5,7 @@
     } else {
         $email = $_SESSION["user_email"];
         $nickName = $_SESSION["NickName"];
+        $idUser = $_SESSION["id"];
     }
 ?>
 
@@ -62,7 +63,7 @@
             </div>
         </nav>
     </section>
-    <form>
+    <form action="./udConta.php" method="post" class="form">
         <section style="margin-top: 1rem;" class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -70,22 +71,25 @@
                 </div>
             </div>
             <div class="row">
+                <div style="display: none" class="col-md-3">                    
+                    <input class="form-control" id="idUser" value="<?php echo $idUser;?>" name="idUser" type="text">                                      
+                </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="userNickName">Nome de Usuário</label><br>
                         <input class="form-control" id="userNickName" value="<?php echo $nickName;?>" name="userNickName" type="text">
                     </div>                    
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="userEmail">Email</label><br>
-                        <input class="form-control" id="userEmail" value="<?php echo $email;?>" name="userEmail" type="text">
-                    </div>                    
-                </div>
+                </div>                
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="userPasswd">Senha</label><br>
                         <input class="form-control" id="userPasswd" name="userPasswd" type="password">
+                    </div>                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="userPasswd">Editar Dados</label><br>
+                        <input class="btn btn-info" id="userPasswd" name="EditUser" type="submit" value="Editar Dados">
                     </div>                    
                 </div>
             </div>
@@ -96,8 +100,8 @@
 
 
 
-    <form action="./excluirUsuario.php" method="post" class="form">
-        <section style="justify-content: center;" class="container">
+    <form action="./udConta.php" method="post" class="form">
+        <section style="margin-top: 1rem;" class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <h6>Deletar sua conta</h6>
