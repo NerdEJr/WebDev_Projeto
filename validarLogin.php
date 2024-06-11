@@ -10,7 +10,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
     $conection = conectar();
 
 
-    $sql = "SELECT nickname FROM usuarios WHERE email = :email AND userPassword = :senha";
+    $sql = "SELECT nickname, email FROM usuarios WHERE email = :email AND userPassword = :senha";
     $usuario = $conection->prepare($sql);
 
     if($usuario){
@@ -31,6 +31,7 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
 
             $_SESSION["Conectado"] = $conectado;
             $_SESSION["NickName"] = $result["nickname"];
+            $_SESSION["Email"] = $result["email"];
             header("Location: conta.php");
         } else {
             echo "Nenhum usuário encontrado com as credenciais fornecidas.";
