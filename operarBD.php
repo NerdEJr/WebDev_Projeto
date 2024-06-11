@@ -65,4 +65,4 @@ function validarUsuario($usuario, $senha){
     }
 }
 
- ?>
+?>
