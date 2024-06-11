@@ -14,39 +14,14 @@
 </head>
 
 <body>
-  <!-- Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-    <!-- Logo ou Imagem Brand -->
-    <a class="navbar-brand" href="index.php">
-        <img class="nav-logo" src="assets/imgs/Logo_Genshin-Black.png" alt="Logo">
-    </a>
-
-    <!-- Botão Toggle para telas pequenas -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Links e Menus -->
-    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav">
-        <!-- Link Home -->
-        <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
-        </li>
-        <!-- Link Sobre Nós -->
-        <li class="nav-item">
-            <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
-        </li>
-        <!-- Link Localização -->
-        <li class="nav-item">
-            <a class="nav-link" href="localizacao.html">Localização</a>
-        </li>
-        </ul>
-    </div>
-    </div>
-</nav>
+  <?php
+        if(isset($_GET['sair'])) {
+            session_start();
+            session_destroy();            
+            header("Location: index.php");
+        }
+        include("navbar.php");
+    ?>
   <div class="maps">
 
     <div class="container-fluid">

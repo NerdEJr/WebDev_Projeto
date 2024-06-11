@@ -26,11 +26,11 @@
                         </li>
                         <!-- Link Sobre Nós -->
                         <li class="nav-item">
-                            <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
+                            <a class="nav-link" href="sobreNos.php">Sobre Nós</a>
                         </li>
                         <!-- Link Localização -->
                         <li class="nav-item">
-                            <a class="nav-link" href="localizacao.html">Localização</a>
+                            <a class="nav-link" href="localizacao.php">Localização</a>
                         </li>
                         <!-- Link Login --> 
                         <li class="nav-item">
@@ -51,11 +51,11 @@
                         </li>
                         <!-- Link Sobre Nós -->
                         <li class="nav-item">
-                            <a class="nav-link" href="sobreNos.html">Sobre Nós</a>
+                            <a class="nav-link" href="sobreNos.php">Sobre Nós</a>
                         </li>
                         <!-- Link Localização -->
                         <li class="nav-item">
-                            <a class="nav-link" href="localizacao.html">Localização</a>
+                            <a class="nav-link" href="localizacao.php">Localização</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?sair">Sair</a>
