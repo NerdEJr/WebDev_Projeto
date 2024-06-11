@@ -65,4 +65,23 @@ function validarUsuario($usuario, $senha){
     }
 }
 
+function DeletarUsuario($email) {
+    
+    try{
+        $conection = conectar();
+        if($conection){
+
+            $sql = $conection->prepare("DELETE FROM usuarios WHERE email = :email");            
+            $sql->bindParam(':email', $email);            
+            $sql->execute();
+
+            header("Location: index.html");
+        }
+
+
+    } catch (PDOException $e){
+        echo($e->getMessage());
+    }
+
+}
 ?>
