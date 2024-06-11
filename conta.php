@@ -1,5 +1,7 @@
 <?php
-
+    if(!session_start()){
+        header('location: login.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
